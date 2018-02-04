@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <simple-property-list name="includeResource">
+        <value>report_zh_CN</value>
+        <value>report_en_US</value>
+    </simple-property-list>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.pojo" name="vvDataSource" id="5">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>SynchronizeClassPath</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClassPath</name>
+                    <value>D:\test\report.jar;</value>
+                </ex-property>
+            </list-property>
+            <property name="pojoDataSetClassPath">D:\test\report.jar;</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.pojo.dataSet" name="vvDataSet" id="6">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ServiceName</property>
+                    <text-property name="heading">ServiceName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Source</property>
+                    <text-property name="heading">Source</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Destination</property>
+                    <text-property name="heading">Destination</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SuccessCount</property>
+                    <text-property name="heading">SuccessCount</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FailCount</property>
+                    <text-property name="heading">FailCount</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ServiceName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Source</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Destination</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">SuccessCount</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">FailCount</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">vvDataSource</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ServiceName</property>
+                    <property name="nativeName">ServiceName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Source</property>
+                    <property name="nativeName">Source</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Destination</property>
+                    <property name="nativeName">Destination</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">SuccessCount</property>
+                    <property name="nativeName">SuccessCount</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">FailCount</property>
+                    <property name="nativeName">FailCount</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PojoQuery appContextKey="APP_CONTEXT_KEY_VVDATASET" dataSetClass="com.bow.base.BaseDataSet" version="1.0">
+    <ColumnMapping index="1" name="ServiceName" odaDataType="String">
+        <Method name="getServiceName"/>
+    </ColumnMapping>
+    <ColumnMapping index="2" name="Source" odaDataType="String">
+        <Method name="getSource"/>
+    </ColumnMapping>
+    <ColumnMapping index="3" name="Destination" odaDataType="String">
+        <Method name="getDestination"/>
+    </ColumnMapping>
+    <ColumnMapping index="4" name="SuccessCount" odaDataType="Integer">
+        <Method name="getSuccessCount"/>
+    </ColumnMapping>
+    <ColumnMapping index="5" name="FailCount" odaDataType="Integer">
+        <Method name="getFailCount"/>
+    </ColumnMapping>
+</PojoQuery>
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ServiceName</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ServiceName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Source</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Source</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Destination</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Destination</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SuccessCount</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SuccessCount</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FailCount</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FailCount</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>methodNameRegx</name>
+                    <value>get*</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClass</name>
+                    <value>com.bow.entity.Status</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="7">
+            <property name="dataSet">vvDataSet</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ServiceName</property>
+                    <text-property name="displayName">ServiceName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ServiceName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Source</property>
+                    <text-property name="displayName">Source</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Source"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Destination</property>
+                    <text-property name="displayName">Destination</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Destination"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">SuccessCount</property>
+                    <text-property name="displayName">SuccessCount</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SuccessCount"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">FailCount</property>
+                    <text-property name="displayName">FailCount</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["FailCount"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <column id="36"/>
+            <column id="37"/>
+            <column id="38"/>
+            <column id="39"/>
+            <column id="40"/>
+            <header>
+                <row id="8">
+                    <cell id="9">
+                        <label id="10">
+                            <text-property name="text" key="serviceName">ServiceName</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11">
+                        <label id="12">
+                            <text-property name="text" key="source">Source</text-property>
+                        </label>
+                    </cell>
+                    <cell id="13">
+                        <label id="14">
+                            <text-property name="text" key="destination">Destination</text-property>
+                        </label>
+                    </cell>
+                    <cell id="15">
+                        <label id="16">
+                            <text-property name="text" key="successCount">SuccessCount</text-property>
+                        </label>
+                    </cell>
+                    <cell id="17">
+                        <label id="18">
+                            <text-property name="text" key="failCount">FailCount</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="19">
+                    <property name="textAlign">center</property>
+                    <cell id="20">
+                        <data id="21">
+                            <property name="resultSetColumn">ServiceName</property>
+                        </data>
+                    </cell>
+                    <cell id="22">
+                        <data id="23">
+                            <property name="resultSetColumn">Source</property>
+                        </data>
+                    </cell>
+                    <cell id="24">
+                        <data id="25">
+                            <property name="resultSetColumn">Destination</property>
+                        </data>
+                    </cell>
+                    <cell id="26">
+                        <data id="27">
+                            <property name="resultSetColumn">SuccessCount</property>
+                        </data>
+                    </cell>
+                    <cell id="28">
+                        <data id="29">
+                            <property name="resultSetColumn">FailCount</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>
